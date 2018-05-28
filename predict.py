@@ -120,6 +120,7 @@ def main():
         u4 = random.uniform(0,2)-1.0
         temp[v4] = temp[v4] + u4
 
+        vec1 = {v1:u1,v2:u2,v3:u3,v4:u4}
         vec2 = sorted(vec1)
         vec3 = [vec1[vec2[0]],vec1[vec2[1]],vec1[vec2[2]],vec1[vec2[3]]]
         vec4 = [temp[vec2[0]],temp[vec2[1]],temp[vec2[2]],temp[vec2[3]]]
