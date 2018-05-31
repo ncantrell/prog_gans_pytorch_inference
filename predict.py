@@ -75,7 +75,7 @@ def run(args, x, frame):
     #plt.imshow(image_np)
     cv2image_np = image_np[...,::-1]
     #cv2.imshow("test", cv2image_np)
-    cv2.imwrite("/home/ubuntu/prog_gans_pytorch_inference/test" + frame + ".png",cv2image_np)
+    cv2.imwrite("/home/ubuntu/prog_gans_pytorch_inference/test" + str(frame) + ".png",cv2image_np)
     #print(images_np.shape)
 
 
