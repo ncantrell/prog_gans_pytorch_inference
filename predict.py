@@ -43,7 +43,7 @@ torch.manual_seed(seed)
 if use_cuda:
     torch.cuda.manual_seed(seed)
 
-def run(args, x):
+def run(args, x, frame):
 
     global use_cuda
     
@@ -75,7 +75,7 @@ def run(args, x):
     #plt.imshow(image_np)
     cv2image_np = image_np[...,::-1]
     #cv2.imshow("test", cv2image_np)
-    cv2.imwrite("/home/ubuntu/prog_gans_pytorch_inference/test.png",cv2image_np)
+    cv2.imwrite("/home/ubuntu/prog_gans_pytorch_inference/test" + frame + ".png",cv2image_np)
     #print(images_np.shape)
 
 
@@ -131,7 +131,7 @@ def main():
         
         xr = rvector
         xr[0,:,0,0] = temp
-        run(args, xr) # modified to allow for the randomized vector to be passed as an argument
+        run(args, xr, loop) # modified to allow for the randomized vector to be passed as an argument
         loop = loop + 1
 
 if __name__ == '__main__':
